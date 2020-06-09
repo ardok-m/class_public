@@ -1667,6 +1667,13 @@ int input_read_parameters(
 
   }
 
+  class_call(parser_read_double(pfc,"A_lens",&param1,&flag1,errmsg),
+             errmsg,
+             errmsg);
+  if (flag1 == _TRUE_){
+      psp->A_lens = param1;
+    }
+
   /* The following lines make sure that if perturbations are not computed, idm_dr and idr parameters are still freed */
 
   if(ppt->has_perturbations == _FALSE_) {
@@ -3429,6 +3436,7 @@ int input_default_params(
 
   psp->z_max_pk = pop->z_pk[0];
   psp->non_diag=0;
+  psp->A_lens=1.;
 
   /** - lensing structure */
 

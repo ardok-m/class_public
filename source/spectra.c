@@ -1088,6 +1088,7 @@ int spectra_compute_cl(
 
     if (_scalars_ && (psp->has_pp == _TRUE_))
       cl_integrand[index_q*cl_integrand_num_columns+1+psp->index_ct_pp]=
+          psp->A_lens *
         primordial_pk[index_ic1_ic2]
         * transfer_ic1[ptr->index_tt_lcmb]
         * transfer_ic2[ptr->index_tt_lcmb]

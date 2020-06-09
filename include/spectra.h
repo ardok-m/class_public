@@ -78,6 +78,8 @@ struct spectra {
   int index_ct_tl; /**< first index for type \f$ C_l^{Tl} \f$(d_size values) */
   int index_ct_dl; /**< first index for type \f$ C_l^{dl} \f$(d_size values) */
 
+  double A_lens; /**< Modify C^phi-phi -> Alens * C^phi-phi */
+
   int d_size;      /**< number of bins for which density Cl's are computed */
 
   int ct_size; /**< number of \f$ C_l \f$ types requested */
