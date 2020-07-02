@@ -470,7 +470,7 @@ int lensing_init(
                psp->error_message,
                ple->error_message);
     cl_tt[l] = cl_unlensed[ple->index_lt_tt];
-    cl_pp[l] = cl_unlensed[ple->index_lt_pp];
+    cl_pp[l] = ple-> A_L * cl_unlensed[ple->index_lt_pp];
     if (ple->has_te==_TRUE_) {
       cl_te[l] = cl_unlensed[ple->index_lt_te];
     }

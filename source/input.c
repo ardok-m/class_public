@@ -2906,6 +2906,8 @@ int input_read_parameters(
     }
   }
 
+  class_read_double("A_L", ple->A_L);
+
   /** (g) amount of information sent to standard output (none if all set to zero) */
 
   class_read_int("background_verbose",
@@ -3433,6 +3435,7 @@ int input_default_params(
   /** - lensing structure */
 
   ple->has_lensed_cls = _FALSE_;
+  ple->A_L=1.;
 
   /** - output structure */
 
